@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      var obj1 = {id:1,fname:"Vinay"}
+      var obj2 = {id:2,fname:"ABC"}
+
+      var arr = [obj1,obj2];
+
+      console.log(arr)
+
+      arr2 = arr.map((x)=>{
+        return {...x};
+      })
+        obj1.id=10
+      console.log(arr2)
+    </script>
+  </body>
+</html>

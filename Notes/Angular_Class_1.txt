@@ -1,0 +1,65 @@
+Interet is a network of networks
+
+WWW is collection of web servers connected to the internet
+
+Web server is a collection of websites and web services
+
+HTTP - Hyper Text(More than plain text) Transfer Protocol
+
+
+Static webpage - page which will be same for all users (same html)
+
+Dynamic webpage - Page which contains different data based on the user inputs.
+
+
+Use of Client Side scripting -  To generate HTML on client side so that Server load can decrease.
+
+ECMA script - Documentation of what a client side scripting language do
+
+Javascript - Language which implements ECMA script
+Created by Netscape (Now called Mozila)
+
+
+--Javascript
+
+Variables are reference to the actual value
+Variables are stored in stack.
+Objects are stored in Heap
+
+****ToDo - Is C#,Java,Javascript fully object oriented or not?
+Examples of Fully and Partially
+In fully OO programming language all values are treated as objects and stored in Heap memory
+Variables are stored in stack memory
+
+In Partially OOP primitive data types are not stored as objects
+
+Datatypes - Defines what type of data a variable refer to
+Uses - Memory allocation, Operation management
+
+Javascript is dynamically typed language
+
+C# is strictly typed
+
+****ToDo --  Which is better?
+
+Arrays
+heterogeneous array - Collection of objects with different datatype
+Homogeneous array - Collection of objects with same datatype
+
+***ToDo - String,Array methods
+
+Object - key value pair
+
+obj ={fname:"Vinay",lname:"Govekar"}
+obj.fname
+
+No need of class for object creation in JS
+
+Plain Sorting in javascript is suitable for string 
+Eg: [21,5,9,4];
+[21, 4, 5, 9]
+
+**** ToDo --  Sorting of Object array
+**** ToDo -- Functional programming
+
+***ToDo - onDblClick, onMouseHover,onMouseover,onMouseout

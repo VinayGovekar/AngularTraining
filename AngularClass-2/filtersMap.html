@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <script>
+      cricketer = [
+        { id: 1, fname: "A", lname: "X", role: "Batsman" },
+        { id: 2, fname: "B", lname: "Y", role: "Bowler" },
+        { id: 3, fname: "C", lname: "Z", role: "Bowler" },
+        { id: 4, fname: "Virat", lname: "Kohli", role: "Batsman" },
+      ];
+
+      console.log(
+        cricketer.sort((x, y) =>
+          x.fname < y.fname ? 1 : x.fname > y.fname ? -1 : 0
+        )
+      );
+
+      console.log(cricketer.filter((x) => x.role == "Batsman"));
+      console.log(
+        cricketer.map((x) => {
+          x.fname += "_Mapped";
+          x.lname = x.lname.toUpperCase()
+          return x;
+        })
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+           
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div id="main">
+
+        </div>
+
+        <script>
+
+            arr = [
+                {fname:"A",lname:"X"},
+                {fname:"B",lname:"Y"},
+                {fname:"C",lname:"Z"},
+            ]
+            main = document.getElementById("main")
+
+            htmlstring = "<table><tr><td>First Name</td><td>Last Name</td></tr>"
+
+            for(var i=0;i<arr.length;i++){
+                htmlstring+="<tr><td>"+arr[i].fname+"</td>" +"<td>"+arr[i].lname+"</td></tr>"
+            }
+
+            htmlstring+="</table"
+            // console.log(htmlstring)
+            main.innerHTML=htmlstring;
+        </script>
+    </body>
+</html>

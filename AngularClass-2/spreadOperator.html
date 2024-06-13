@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <script>
+      var arr = [1, 2, 3, 4];
+      arr2 = arr;
+      arr2[0] = "Vinay";
+      console.log(arr);
+
+      cricketer = [
+        { id: 1, fname: "A", lname: "X", role: "Batsman" },
+        { id: 2, fname: "B", lname: "Y", role: "Bowler" },
+        { id: 3, fname: "C", lname: "Z", role: "Bowler" },
+        { id: 4, fname: "Virat", lname: "Kohli", role: "Batsman" },
+      ];
+
+      cricketer2 = cricketer;//Shallow copy
+      cricketer2[0] = { id: 7, fname: "AGASDGA", lname: "X", role: "Batsman" };
+      console.log(cricketer);
+
+      cricketer3 = {...cricketer }; //Deep copy
+      cricketer3[1] = { id: 7, fname: "AGASDGA", lname: "X", role: "Batsman" };
+      console.log(cricketer);
+      console.log(cricketer3);
+    </script>
+  </body>
+</html>

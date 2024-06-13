@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+        <script>
+
+            function domMani(){
+                arr = ["A","B","C"];
+
+            main = document.getElementById("main")
+
+            htmlstring = "<ul>"
+            for(i=0;i<arr.length;i++){
+                htmlstring+="<li>"+arr[i]+"</li>"
+            }
+
+            htmlstring+="</ul>"
+            // console.log(htmlstring)
+            main.innerHTML=htmlstring;
+            }
+            
+        </script>
+    </head>
+
+    <body onload="domMani()">
+        <div id="main">
+
+        </div>
+
+        
+    </body>
+</html>

@@ -1,0 +1,15 @@
+Javascript:
+
+Functions are also treated as datatypes in JS
+
+sayHi(){
+return "Hi"
+}
+
+console.log(typeof sayHi)
+
+
+Function can be passed as parameter like string number etc
+Functions can be returned from another function 
+
+This concept is called Functional programming

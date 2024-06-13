@@ -1,0 +1,76 @@
+           
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div id="main">
+
+        </div>
+        <input type="text" id="firstName">
+        <input type="text" id="lastName">
+        <button onclick="addObject()">Add</button>
+        <button onclick="sortArray(event)" ondblclick="reverseSortArray(event)" >Sort</button>
+        <script>
+
+            arr = [
+                {fname:"A",lname:"X"},
+                {fname:"B",lname:"Y"},
+                {fname:"C",lname:"Z"},
+            ]
+            function generateList()
+{
+    main = document.getElementById("main")
+            htmlstring = "<table><tr><td>First Name</td><td>Last Name</td></tr>"
+                
+            for(var i=0;i<arr.length;i++){
+                var removeButton = "<button onClick='removeObject("+i+")'>Remove</button>"
+                htmlstring+="<tr><td>"+arr[i].fname+"</td>" +"<td>"+arr[i].lname+"</td><td>"+removeButton+"</td></tr>"
+            }
+
+            htmlstring+="</table"
+            // console.log(htmlstring)
+            main.innerHTML=htmlstring;
+}            
+
+function removeObject(id){
+    arr.splice(id,1);
+    generateList();
+}
+
+function addObject(){
+    var firstName= document.getElementById("firstName")
+    var lastName = document.getElementById("lastName")
+    if(firstName.value==""){
+        alert("First name cannot be blank")
+    }
+    else if(lastName.value==""){
+        alert("Last name cannot be blank")
+    }
+    else if(firstName.value!="" && lastName.value!=""){
+        arr.push({fname:firstName.value,lname:lastName.value});
+        firstName.value=""
+        lastName.value=""
+        generateList();
+    }
+}
+
+
+function sortArray(){
+    arr.sort((x, y) => x.fname<y.fname? 1:x.fname>y.fname?-1:0)  
+    generateList();
+}
+
+function reverseSortArray(event){
+    console.log("reverse");
+    console.log(event)
+    arr.sort((a,b)=>{
+        return 1;
+    })  
+    generateList();
+}
+generateList();
+        </script>
+    </body>
+</html>

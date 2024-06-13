@@ -1,0 +1,58 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <button onclick="sortArray()"> Sort </button>
+        <div id="main">
+
+        </div>
+
+        <input type="text" id="inputText"/>
+        <button id="AddButton" onclick="AddName()"> 
+            Add
+        </button>
+
+        <script>
+            arr = ["A","B","C"];
+
+            function generateList(){
+                main = document.getElementById("main")
+            htmlstring = "<ul>"
+            for(var i=0;i<arr.length;i++){
+                var removeButton = "<button onclick='removeName("+i+")'> Remove</button>"
+                console.log(removeButton)
+                htmlstring+="<li>"+arr[i] + removeButton+ "</li>"
+            }
+
+            htmlstring+="</ul>"
+            main.innerHTML=htmlstring;
+
+            }
+
+            function AddName(){
+                var inputText = document.getElementById("inputText")
+                if(inputText.value!="")
+                {
+                    arr.push(inputText.value)
+                }
+                generateList();
+                inputText.value=""
+            }
+
+            function removeName(i){
+                arr.splice(i,1);
+                generateList();
+            }
+
+
+            function sortArray(){
+                arr.sort();
+                generateList();
+            }
+            generateList();
+
+        </script>
+    </body>
+</html>
