@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row m-1 p-1"><h5 class="text-center">Profile Builder</h5></div>
+  <div class="row m-1 p-1">
+    <div class="col-sm border border-dark rounded m-1 p-1">
+      <div class="container m-1 p-1">
+        First Name :
+        {{ firstName }}
+        <br />
+      </div>
+      <div class="container m-1 p-1">
+        Last Name :
+        {{ lastName }}
+        <br />
+      </div>
+      <div class="container m-1 p-1">
+        Address :
+        {{ address }}
+        <br />
+      </div>
+      <div class="container m-1 p-1">
+        Phone Number :
+        {{ phoneNumber }}
+      </div>
+
+      <div class="container m-1 p-1">
+        Skills : <br>
+          @for (skill of skills; track $index) {
+            @if (skill.checked==true) {
+              {{skill.description}}
+            }
+          }
+      </div>
+    </div>
+    <div class="col-sm border border-dark rounded m-1 p-1">
+      <div class="container m-1 p-1">
+        First Name : <input type="text" [(ngModel)]="firstName" />
+        <br />
+      </div>
+      <div class="container m-1 p-1">
+        Last Name : <input type="text" [(ngModel)]="lastName" />
+        <br />
+      </div>
+      <div class="container m-1 p-1">
+        Address :<br />
+        <input type="textarea" [(ngModel)]="address" />
+        <br />
+      </div>
+      <div class="container m-1 p-1">
+        Phone Number : <input type="number" [(ngModel)]="phoneNumber" />
+      </div>
+      <div  class="container m-1 p-1">
+        Skills:
+        @for (skill of skills; track $index) {
+          {{skill.description}}<input type="checkbox"  checked={{skill.checked}}>
+          }
+      </div>
+    </div>
+  </div>
+</div>
