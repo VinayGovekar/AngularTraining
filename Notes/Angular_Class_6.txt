@@ -1,0 +1,12 @@
+navigation
+dynamic routing
+Regex
+Promises
+LazyLoading
+
+        <strong>Valid ? </strong>{{singUpForm.form.controls['firstName']?.valid}} <br> value is valid 
+        <strong>Invalid ? </strong>{{singUpForm.form.controls['firstName']?.invalid}}<br>
+        <strong>Touched ? </strong>{{singUpForm.form.controls['firstName']?.touched}}<br> touched value maybe changed or not
+        <strong>Untouched ? </strong>{{singUpForm.form.controls['firstName']?.untouched}}<br> 
+        <strong>Dirty ? </strong>{{singUpForm.form.controls['firstName']?.dirty}}<br> touched and changed the value
+        <strong>Pristine ? </strong>{{singUpForm.form.controls['firstName']?.pristine}}<br> touched but value is not changed

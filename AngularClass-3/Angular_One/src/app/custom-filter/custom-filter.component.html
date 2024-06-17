@@ -1,0 +1,35 @@
+<h1>Pipes</h1>
+<br>
+<hr>
+
+<div class="container">
+    <div class="row">
+        @for (cricketer of cricketers| filterPipe:'fname':'Sachin'; track $index) {
+
+            <div class="col-6">
+                {{cricketer.fname}}
+            </div>
+            
+            <div class="col-6">
+                {{cricketer.lname}}
+            </div>
+        }
+        
+    </div>
+</div>
+
+
+
+<input type="checkbox" name="isChecked" id="" [(ngModel)]="isChecked"> IsChecked
+@if (isChecked) {
+    <p>
+        {{cricketers | filterPipe:'fname':'Sachin' | json}}
+    </p>
+    
+}
+@else {
+    <p>
+        {{cricketers|filterPipe:'lname':'Dravid' | json}}
+    </p>
+    
+}
