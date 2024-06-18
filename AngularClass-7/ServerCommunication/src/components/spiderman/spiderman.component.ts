@@ -16,7 +16,9 @@ export class SpidermanComponent implements OnInit {
     this.missionService.getCricketers().subscribe((data:any)=>{
       this.cricketers=data;
     });
+    this.missionService.addCricketer(null).subscribe((data:any)=>{
 
+    })
   }
 
   removeCricketer(id:string){
