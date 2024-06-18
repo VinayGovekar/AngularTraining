@@ -1,0 +1,42 @@
+<div class="container">
+  <form #singUpForm="ngForm" class="form">
+    
+    <h5>Cricketer First Name :</h5>
+    <input
+      type="text"
+      #missionName="ngModel"
+      name="misionName"
+      [(ngModel)]="cricketerName"
+      required
+      class="w-100"
+    />
+    <h5>Cricketer Last Name :</h5>
+    <input
+      type="text"
+      #missionName="ngModel"
+      name="misionName"
+      [(ngModel)]="cricketerLName"
+      required
+      class="w-100"
+    />
+    <h5>Cricketer Role :</h5>
+    <input
+      type="text"
+      #missionName="ngModel"
+      name="misionName"
+      [(ngModel)]="cricketerRole"
+      required
+      class="w-100"
+    />
+    
+    <!-- @if(missionName.hasError('required') && singUpForm.submitted){
+    <p class="alert alert-primary" role="alert">This field is required</p>
+    } -->
+    <p>
+        <br>
+      <button class="btn btn-primary w-100" type="submit" (click)="addCricketer()">
+        Add Cricketer
+      </button>
+    </p>
+  </form>
+</div>

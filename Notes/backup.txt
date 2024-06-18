@@ -1,0 +1,34 @@
+{
+  "cricketers": [
+    {
+      "id": "0",
+      "fname": "Sachin",
+      "lname": "Tendulkar",
+      "role": "Batsman"
+    },
+    {
+      "id": "1",
+      "fname": "Zaheer",
+      "lname": "Khan",
+      "role": "Bowler"
+    },
+    {
+      "id": "2",
+      "fname": "Virat",
+      "lname": "Kohli",
+      "role": "Batsman"
+    },
+    {
+      "id": "3",
+      "fname": "Ravindra",
+      "lname": "Jadeja",
+      "role": "Fielder"
+    },
+    {
+      "id": "4",
+      "fname": "Rohit",
+      "lname": "Sharma",
+      "role": "Batsman"
+    }
+  ]
+}

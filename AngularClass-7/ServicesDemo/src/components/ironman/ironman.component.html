@@ -1,0 +1,25 @@
+<div class="container">
+  <form #singUpForm="ngForm" class="form">
+    
+    <h5>Mission Name :</h5>
+    <input
+      type="text"
+      #missionName="ngModel"
+      name="misionName"
+      [(ngModel)]="missionText"
+      required
+      class="w-100"
+    />
+
+    
+    <!-- @if(missionName.hasError('required') && singUpForm.submitted){
+    <p class="alert alert-primary" role="alert">This field is required</p>
+    } -->
+    <p>
+        <br>
+      <button class="btn btn-primary w-100" type="submit" (click)="addMission()">
+        Add Mission
+      </button>
+    </p>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+<h5>Cricketer List :</h5>
+<div class="container p-10">
+  <div class="row">
+    <ul class="list-group">
+      @for (cricketer of cricketers; track $index) {
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-6">{{ cricketer.fname }}</div>
+          <div class="col-3">
+            <button class="btn btn-warning" (click)="moveUp($index)">
+                <i class="bi bi-arrow-up-circle-fill"></i>
+            </button>
+          </div>
+          <div class="col-3">
+            <button class="btn btn-danger" (click)="removeCricketer(cricketer.id)">
+                <i class="bi bi-trash-fill"></i>
+            </button>
+          </div>
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

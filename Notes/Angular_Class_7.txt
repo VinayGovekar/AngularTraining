@@ -1,0 +1,28 @@
+Tight Coupling - Loose Coupling
+DI
+
+
+@Component({
+  selector: 'app-spiderman',
+  standalone: true,
+  imports: [],
+  templateUrl: './spiderman.component.html',
+  styleUrl: './spiderman.component.css',
+})
+export class SpidermanComponent {
+  constructor(private missionService: MissionService) {}
+}
+
+@Injectable({
+  providedIn: 'root',
+}) -->This part makes the service injectable so that object is shared between components
+-- If not added then a new object will be created of each components
+
+
+
+Subject -  Data which is shared
+Observable - The one which shares the data
+Observer - Receives data
+
+
+Different between different types of subject
