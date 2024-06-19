@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class MissionService{
+export class MissionService {
   baseURL: string = 'http://localhost:3000/cricketers';
 
   cricketers:any=[]
-  additionHappend = new BehaviorSubject<any>(this.cricketers)
+
+  cricketerUpdated = new Subject<any>();
   constructor(private cricketerClient: HttpClient) {}
- 
   getCricketers(): any {
     return this.cricketerClient.get(this.baseURL);
   }
@@ -20,8 +20,16 @@ export class MissionService{
     return this.cricketerClient.delete(this.baseURL+"/"+id)
   }
 
+  getDataChanged():any{
+    return this.cricketerUpdated.asObservable();
+  }
   addCricketer(cricketer:any){
-    this.additionHappend.next(cricketer)
-    return this.cricketerClient.post(this.baseURL,cricketer)
+    console.log("in add service");
+    
+    // this.cricketerClient.post(this.baseURL,cricketer).subscribe(()=>this.cricketerUpdated.next(""));
+    return this.cricketerClient.post(this.baseURL,cricketer).pipe(
+      map(x=>this.cricketerUpdated.next(x))
+    )
+    
   }
 }

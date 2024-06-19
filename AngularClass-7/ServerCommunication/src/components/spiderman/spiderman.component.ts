@@ -12,13 +12,21 @@ export class SpidermanComponent implements OnInit {
   cricketers:any |undefined
   constructor(private missionService: MissionService) {}
 
-  ngOnInit(): void {
+
+  getData():void{
     this.missionService.getCricketers().subscribe((data:any)=>{
       this.cricketers=data;
     });
-    this.missionService.addCricketer(null).subscribe((data:any)=>{
-
-    })
+  }
+  ngOnInit(): void {
+    
+    this.getData()
+    console.log("oninit");
+    
+    this.missionService.getDataChanged().subscribe((data:any)=>{
+      console.log("onsub")
+      this.getData();
+    });
   }
 
   removeCricketer(id:string){

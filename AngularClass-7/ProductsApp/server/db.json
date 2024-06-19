@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "Tshirt",
+      "cost": "500",
+      "brand": "Puma",
+      "category": "clothing",
+      "rating": "4.3"
+    },
+    {
+      "id": "2",
+      "productName": "Laptop",
+      "cost": "50000",
+      "brand": "Asus",
+      "category": "Electronics",
+      "rating": "3"
+    },
+    {
+      "id": "3",
+      "productName": "Maggi",
+      "cost": "50",
+      "brand": "Parle",
+      "category": "Food",
+      "rating": "1"
+    },
+    {
+      "id": "4",
+      "productName": "Mobile",
+      "cost": "5000",
+      "brand": "Samsung",
+      "category": "Electronics",
+      "rating": "2"
+    }
+  ],
+  "productCart": []
+}

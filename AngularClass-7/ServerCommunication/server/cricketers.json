@@ -19,16 +19,10 @@
       "role": "Batsman"
     },
     {
-      "id": "3",
-      "fname": "Ravindra",
-      "lname": "Jadeja",
-      "role": "Fielder"
-    },
-    {
       "id": "12",
-      "fname": "asgasgasg",
-      "lname": "asgasg",
-      "role": "asgasga"
+      "fname": "Rohit",
+      "lname": "Sharma",
+      "role": "Batsman"
     }
   ]
 }

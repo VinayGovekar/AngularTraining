@@ -21,8 +21,6 @@ export class IronmanComponent {
       fname: this.cricketerName,
       lname: this.cricketerLName,
       role: this.cricketerRole,
-    }).subscribe((data:any)=>{
-     
-    });
+    }).subscribe();
   }
 }
