@@ -1,0 +1,30 @@
+StageManagement - 
+To check what is the current state of an object 
+
+eg: useState of react
+
+Feature - A project can contain multiple entities like doctors, patients etc
+
+Each of these entity will have a state
+
+To manage these we use stateManagement
+
+To manage all states together we use StoreManagement
+
+
+Action - to be dispatched to Store
+Action is dispatched by component
+
+Action -> type:add,remove
+	  payload:Data sent along with action
+
+
+Store: Each state will have a selector(slice)
+Reducer (Manages state inside the store)
+(Action listener)
+
+
+Component -> dispatches Action with Type(add,remove) and payload -> Store 
+-> has multiple selectors and each selectors has a reducer (manages state inside store) 
+-> has multiple action listners for each action 
+and each action does some state management
