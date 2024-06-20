@@ -1,0 +1,35 @@
+<div class="container m-3">
+  <div class="row">
+    <h4>Cricketer List :</h4>
+  </div>
+  <div class="row m-2">
+    <ul class="list-group">
+      @for (cricketer of cricketers; track $index) {
+      <li class="list-group-item">
+        <div class="container">
+          <div class="row">
+            <div class="col-3 text-center">{{ cricketer.fname }}</div>
+            <div class="col-3 text-center">{{ cricketer.lname }}</div>
+            <div class="col-3 text-center">{{ cricketer.role }}</div>
+            <div class="col-3 text-center">
+              <button
+                class="btn btn-danger"
+                (click)="removeCrickter(cricketer.id)"
+              >
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-7 text-center m-2">
+      <button class="btn btn btn-warning" (click)="clearList()">
+        <i class="bi bi-x-circle"></i> Clear
+      </button>
+    </div>
+  </div>
+</div>
