@@ -1,0 +1,43 @@
+Unit Testing:
+
+To test functions inside components and service by checking if the output matches with the expected output
+
+JST: Just in Time compiler
+Compile all dependencies of a component when the component is compiled
+
+Mocking:
+Using dummy dependencies instead of the original when testing a component which has dependencies
+
+spying:
+Eg: If component is actually calling service functions or not
+
+testcase: Different scenerios/cases which will be implement in testing.
+
+Jasmine - Framework for testing JS codes
+
+Testrunner - Generates an environment which contains testcases, components on which test cases will be executed and reports to show if testcases are passed or failed\
+test cases are written inside test suite
+
+describe("AppComponent test suite",()=>{
+beforeEach(()=>{
+//this code runs before each test case
+})
+it("should something",()=>{
+//mocking , spying code
+
+expect().tobeEqual(Actualoutput,expected output)
+
+});
+it("should test something else",()=>{
+
+})
+
+})
+
+
+
+Directives:
+
+Attribute - [disabled] ,etc any attribute which is send to tag  []
+Structural - @if @for 
+Component - directive with its own template
